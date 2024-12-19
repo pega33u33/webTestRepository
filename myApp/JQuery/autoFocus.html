@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <!-- script src="https://code.jquery.com/jquery-3.7.1.js"></script -->    
+    <script>
+        // 이벤트를연결합니다. 
+        window.onload = function() {
+            // 문서 객체를선택합니다.
+            let input_1 = document.querySelectorAll('input')[0];
+            let input_2 = document.querySelectorAll('input')[1];
+            
+            // input_1
+            input_1.onkeydown = function() {
+                if(6<=input_1.value.length) {
+                    input_2.focus();
+                }
+            };
+
+            // input_2
+            input_2.onkeydown = function(event) {
+                // 이벤트객체를추출합니다. 
+                event = event || window.event;
+                // 사용자의입력이'백스페이스'이고입력된글자가없을때
+                if(event.keyCode == 8 && input_2.value.length == 0) {
+                    input_1.focus();
+                }
+            };
+        };
+    </script>  
+    <!-- script>
+        window.onload = function () {
+            window.onkeydown = function (event) {
+                alert(event.keyCode);
+            }
+        }
+    </script -->  
+</head>
+<body>
+    <!-- 입력 양식 -->    
+    <input type="text" maxlength="6">
+    <span>-</span>
+    <input type="text" maxlength="7">
+    
+</body>
+</html>

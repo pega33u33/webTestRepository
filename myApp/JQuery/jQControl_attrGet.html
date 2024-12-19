@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryBasic</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            let src = $('script').attr('src');
+            alert(src);
+        });
+    </script>
+    <script>
+        let img01 = document.getElementById('img01');
+        let img02 = document.getElementById('img02');
+        let img03 = document.getElementById('img03');
+        $(document).ready(function() {
+            $('#img01').attr('src', 'http://via.placeholder.com/300x200');
+            $('#img02').attr({
+                src: 'http://via.placeholder.com/300x200',
+                width:600,
+                height:400
+            });
+            $('#img03').attr('src', function(index) {
+                var index = 3;
+                var size = (index + 1) * 100;
+                return 'http://via.placeholder.com/' + size + 'x100';
+            });
+            
+        });
+    </script>
+    <!--script>
+        $(document).ready(function() {
+            $('img').attr({
+                src: 'http://via.placeholder.com/600x400',
+                width:600,
+                height:400
+            });
+        })
+    </script-->
+</head>
+<body>
+    <img id="img01"><br>
+    <!-- script>
+        $('img').attr('src', 'http://via.placeholder.com/300x200');
+    </script -->
+    <img id="img02"><br>
+    <img id="img03"><br>
+</body>
+</html>

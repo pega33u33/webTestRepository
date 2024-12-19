@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>           
+    <script>
+        // 이벤트를연결합니다. 
+        $(document).ready(function() {
+        // 10회 반복합니다.
+        for (let i = 0; i < 10; i++) {
+            // 문서 객체를 생성합니다.
+            let $dynamic = $('<h1>Create Document Object By jQuery + ' + i + '</h1>').css({
+                color:'red',
+                background:'black'
+                // 'margin-top': 10
+            });
+            
+            // 문서 객체를추가합니다. 
+            // $($dynamic).appendTo('body'); 
+            $('body').append($dynamic);
+        }            
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

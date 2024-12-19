@@ -1,0 +1,17 @@
+#box {
+    width: 200px;
+    height: 200px;
+    background: aqua;
+    margin: 100px auto;
+    /* border: 5px solid #000;
+    transform: rotate(0deg); */
+}
+a {
+    font-size: 100px;
+    color: #555;
+}
+.numDisplay {
+    font-size: 100px;
+    font-weight: bolder;
+    color: blueviolet;
+}

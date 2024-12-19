@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryBasic</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>    
+    <script>
+        $(document).ready(function() {
+            $('#box').css({
+                width:100,
+                height:100,
+                background: 'red',
+                position: 'absolute',
+                top: 10,
+                left: 10
+            }).animate({
+                height: '+=300',
+                width:'-=50',
+                left: '+=300',
+                opacity:0.5
+            }, 50000);       
+           /*
+           $('button').click(function(event) {
+            $('.page').fadeToggle('slow');
+            });            
+           
+           $('form').submit(function(event) {
+            let value = $('input').val();
+
+            if (value.replace(/[가-힣]/g,'').length == 0) {
+                alert('과정을 진행합니다.');
+            } else {
+                alert('한글 이름을 입력해주세요.');
+                event.preventDefault();
+            }
+           })
+           */
+        });
+    </script>    
+</head>
+<body>
+    <!-- h1>Click</h1>
+    <h1>Header - 1</h1 -->
+    <div id="box"></div>
+    <!-- a href="http://hanbit.co.kr">Hanbit Publishing</a -->
+        <!-- form>
+            <label>이름</label>
+            <input type="text">
+            <input type="submit">
+        </form>
+    <button>Toggle Show</button>
+    <div class="page">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, totam!</p>
+    </div -->
+</body>
+</html>
